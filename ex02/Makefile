@@ -59,6 +59,7 @@ clean:
 
 fclean: clean
 	@rm -rf $(NAME)
+	@rm -rf House_shrubbery
 	@echo $(F_BOLD)$(F_ITALIC)$(C_RED)FULL CLEAN COMPLETED...$(RESET)
 
 bonus: all
