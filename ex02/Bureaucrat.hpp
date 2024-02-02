@@ -13,6 +13,8 @@
 #ifndef HPP_BUREAUCRAT
 # define HPP_BUREAUCRAT
 
+class AForm;
+
 # include <iostream>
 # include <exception>
 # include "AForm.hpp"
@@ -42,6 +44,7 @@ class Bureaucrat {
 		void				demote(void);
 		void				setGrade(int grade);
 		void				signAForm(AForm &AForm);
+		void				executeForm(const AForm &form);
 	private:
 		const std::string	_name;
 		int					_grade;

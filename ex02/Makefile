@@ -16,7 +16,7 @@ C_YELLOW = \\x1b[33m
 
 NAME = bureaucrat
 
-SRC = main.cpp Bureaucrat.cpp Form.cpp
+SRC = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
 
 OBJS = $(patsubst %.cpp, bin/%.o, $(SRC))
 

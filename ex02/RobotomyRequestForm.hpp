@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmarcott <mmarcott@student.42quebec.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/01 16:10:28 by mmarcott          #+#    #+#             */
-/*   Updated: 2024/02/02 12:32:11 by mmarcott         ###   ########.fr       */
+/*   Created: 2024/02/02 12:58:32 by mmarcott          #+#    #+#             */
+/*   Updated: 2024/02/02 13:22:59 by mmarcott         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HPP_SHRUBERRY
-# define HPP_SHRUBERRY
+#ifndef HPP_ROBOTOMY
+# define HPP_ROBOTOMY
 
-#include "AForm.hpp"
+# include "AForm.hpp"
 
-class ShrubberyCreationForm: public AForm {
+class RobotomyRequestForm: public AForm {
 	public:
-		ShrubberyCreationForm(const std::string target);
-		ShrubberyCreationForm(const ShrubberyCreationForm &copy);
-		~ShrubberyCreationForm(void);
+		RobotomyRequestForm(const std::string &target);
+		RobotomyRequestForm(const RobotomyRequestForm &copy);
+		~RobotomyRequestForm(void);
 
-		ShrubberyCreationForm	&operator==(const ShrubberyCreationForm &rhs);
+		RobotomyRequestForm	&operator=(const RobotomyRequestForm &rhs);
 
-		void	execute(Bureaucrat const &executor) const;
+		const std::string	getTarget(void) const;
+		void	execute(const Bureaucrat &executor) const;
 	private:
-		std::string	_target;
+		const std::string	_target;
 };
 
 #endif
-
